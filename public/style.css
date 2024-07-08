@@ -1,0 +1,1157 @@
+@import url("./reset.css");
+@font-face {
+  font-family: "kim";
+  src: url(./font/Helvetica\ Neue-normal-400-100.ttf);
+}
+/* gototop */
+
+.gototop a {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 100%;
+  z-index: 15;
+  transition: all 0.3s;
+}
+.gototop a:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.gototop a i {
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+}
+/* header */
+.header-wrapper {
+  width: 100%;
+  height: 65px;
+  padding: 0 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.nav-left {
+  display: flex;
+  font: 16px "kim";
+  gap: 28px;
+  color: #888;
+}
+.logo1 {
+  transition: all 0.3s;
+}
+.logo1-side {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  padding: 20px 35px;
+  font: 12px "kim";
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  z-index: 6;
+}
+.logo1-side.active {
+  display: block;
+}
+.logo1-side span {
+  margin-right: 30px;
+  cursor: pointer;
+}
+.logo1-side span:hover {
+  color: #000;
+}
+.logo2 {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.logo2-side {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  padding: 20px 35px;
+  font: 12px "kim";
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+.logo2-side.active {
+  display: block;
+}
+.logo2-side span {
+  margin-right: 30px;
+  cursor: pointer;
+}
+.logo2-side span:hover {
+  color: #000;
+}
+.logo1:hover {
+  color: #000;
+}
+.logo2:hover {
+  color: #000;
+}
+.logo3 {
+  margin: 0 auto;
+}
+.logo3 img {
+  width: 167px;
+}
+.nav-right {
+  display: flex;
+  height: 20px;
+  font: 12px "kim";
+  gap: 24px;
+}
+.nav-right a {
+  display: flex;
+  gap: 10px;
+}
+.nav-right span {
+  display: inline-block;
+  line-height: 20px;
+  color: #000;
+  opacity: 0.7;
+}
+.nav-right img {
+  width: 20px;
+  margin-left: 5px;
+  opacity: 0.7;
+}
+.search {
+  transition: all 0.3s;
+}
+.search:hover img {
+  opacity: 1;
+}
+.search:hover span {
+  opacity: 1;
+}
+.search-page {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  display: none;
+}
+.search-page.active {
+  display: block;
+}
+.search-left {
+  width: calc(100%-580px);
+  height: 100vh;
+  background: #111;
+  opacity: 0.4;
+}
+.search-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 580px;
+  height: 100vh;
+  background: #fff;
+  z-index: 6;
+}
+.search-right .search-header {
+  width: 100%;
+  height: 80px;
+  padding: 0 35px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #111;
+}
+.search-header span {
+  font: 14px "kim";
+}
+.search-header a i {
+  font-size: 16px;
+  color: #999;
+  transition: all 0.3s;
+}
+.search-header a i:hover {
+  color: #111;
+}
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 20px auto;
+  border-bottom: 1px solid #999;
+}
+.search-bar input {
+  width: 80%;
+  padding: 20px 0;
+  font: 14px "kim";
+  border: none;
+  color: #999;
+}
+.search-bar input:focus {
+  outline: none;
+}
+.search-bar input:focus .search-bar img {
+  width: 36px;
+}
+/* login */
+.account {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.account:hover img {
+  opacity: 1;
+}
+.account:hover span {
+  opacity: 1;
+}
+.account-page {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+}
+.account-page.active {
+  display: block;
+}
+.account-left {
+  width: calc(100%-580px);
+  height: 100vh;
+  background: #111;
+  opacity: 0.4;
+}
+.account-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 580px;
+  height: 100vh;
+  background: #fff;
+  z-index: 6;
+}
+.account-header {
+  width: 80%;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #111;
+}
+.account-header span {
+  font-size: 21px;
+}
+.account-header a i {
+  font-size: 18px;
+}
+.account-log {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.account-log .id {
+  width: 100%;
+  padding: 8px 0;
+  margin: 20px 0;
+  border: none;
+  border-bottom: 1px solid #999;
+}
+.account-log .id:focus {
+  outline: none;
+  border-bottom: 1px solid #111;
+}
+.account-log .ps {
+  width: 100%;
+  padding: 8px 0;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #999;
+}
+.account-log .ps:focus {
+  outline: none;
+  border-bottom: 1px solid #111;
+}
+.checkbox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  margin: 35px 0;
+}
+.checkbox .id-save-check {
+  width: 17px;
+  height: 17px;
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox .id-save-check::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ddd;
+}
+.checkbox .id-save-check:checked::before {
+  content: "\2713";
+  background: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 17px;
+  border: none;
+}
+.login-btn {
+  width: 100%;
+  height: 56px;
+  border: none;
+  background: #000;
+  color: #fff;
+  transition: all 0.5s;
+  margin-bottom: 25px;
+  font: 13px "kim";
+  cursor: pointer;
+}
+.login-btn:hover {
+  background: none;
+  border: 1px solid #000;
+  color: #000;
+}
+.login-find {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.log-footer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.log-footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  margin: 4px;
+  font: 13px "kim";
+}
+.kakao {
+  background: #f9e000;
+}
+.kakao img {
+  width: 22px;
+  opacity: 1;
+}
+.naver {
+  border: 1px solid #2db400;
+}
+.naver img {
+  opacity: 1;
+}
+.apple {
+  border: 1px solid #000;
+}
+.apple img {
+  width: 20px;
+  margin-right: 6px;
+  opacity: 1;
+}
+.sign-in {
+  width: 80%;
+  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+}
+.not-member {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.sign-in-gift {
+  width: 100%;
+  height: 56px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  font: 13px "kim";
+  cursor: pointer;
+}
+.sign-in-gift:hover {
+  background: #000;
+  border: none;
+  color: #fff;
+}
+.wish {
+  transition: all 0.3s;
+}
+.wish:hover img {
+  opacity: 1;
+}
+.wish:hover span {
+  opacity: 1;
+}
+.cart {
+  transition: all 0.3s;
+}
+.cart:hover img {
+  opacity: 1;
+}
+.cart:hover span {
+  opacity: 1;
+}
+/* m-header */
+.m-header {
+  display: none;
+}
+
+/* category */
+.m-category {
+  display: none;
+}
+.category {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: 100px;
+  padding-right: 35px;
+  font: 12px "kim";
+  z-index: 8;
+}
+.category-btn {
+  padding-top: 20px;
+}
+.category-btn a {
+  margin-left: 5px;
+  color: #999;
+  transition: all 0.3s;
+}
+.category-btn a:hover {
+  color: #000;
+}
+.category-btn span {
+  margin-left: 5px;
+}
+/* product */
+#products {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#products a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#products a .images {
+  position: relative;
+}
+#products a .images img {
+  width: 100%;
+  cursor: pointer;
+}
+#products a .product-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+#products a .product-img:hover {
+  opacity: 0;
+}
+#products a .product-name {
+  font: 13px "kim";
+  margin-bottom: 7px;
+  color: #666;
+}
+#products a span {
+  font: 14px "kim";
+  margin-bottom: 7px;
+}
+#products a p {
+  font: 12px "kim";
+  margin-bottom: 7px;
+}
+#products .soldout {
+  color: #f00;
+}
+/* product detail */
+.product-detail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.product-detail-img {
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+  width: 60%;
+}
+.product-detail-img img {
+  border-bottom: 1px solid #ddd;
+}
+.product-detail-content {
+  width: 40%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  right: 0;
+  padding: 70px;
+  padding-top: 130px;
+}
+.detail-content-top {
+  margin-bottom: 50px;
+}
+.product-detail-content .detail-content-top span {
+  font: 13px "kim";
+  display: flex;
+  color: #888;
+  transition: all 0.3s;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+.product-detail-content .detail-content-top span p {
+  cursor: pointer;
+}
+.product-detail-content .detail-content-top span p:hover {
+  color: #111;
+}
+.detail-content-top .product-name {
+  font-weight: normal;
+  font: 24px "kim";
+  margin-bottom: 15px;
+}
+.detail-content-top .product-num {
+  font-weight: normal;
+  font: 12px "kim";
+  margin-bottom: 15px;
+}
+.detail-content-top .ex {
+  font: 13px "kim";
+  letter-spacing: -1px;
+}
+.detail-content-top b {
+  font: 24px "kim";
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.detail-content-mid {
+  display: flex;
+  flex-direction: column;
+}
+.detail-content-mid span {
+  font: 13px "kim";
+  color: #888;
+}
+.detail-content-mid .detail-color {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+.detail-content-mid .detail-color span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #000;
+  margin-right: 30px;
+  position: relative;
+}
+.detail-content-mid .detail-color span:hover::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.detail-content-mid .detail-color span:nth-child(2) {
+  background: #fff5ee;
+  border: 1px solid #ddd;
+}
+.detail-content-mid .detail-color span:nth-child(2):hover::before {
+  content: "";
+  border: 1px solid #ddd;
+}
+.detail-content-mid .detail-color span:nth-child(3) {
+  background: #f0e86c;
+}
+.detail-content-mid .detail-color span:nth-child(3):hover::before {
+  content: "";
+  border: 1px solid #f0e86c;
+}
+.detail-content-mid .detail-color span:nth-child(4) {
+  background: #ffc0cb;
+}
+.detail-content-mid .detail-color span:nth-child(4):hover::before {
+  content: "";
+  border: 1px solid #ffc0cb;
+}
+.detail-content-mid .detail-color p {
+  font: 13px "kim";
+  color: #888;
+}
+.detail-content-mid .free-size {
+  border: none;
+  background: transparent;
+  padding: 15px 0;
+  border-bottom: 1px solid #222;
+  width: 100;
+  color: #888;
+  margin: 20px 0;
+  font: 13px "kim";
+}
+.detail-content-mid .free-size.active {
+  border: 1px solid #000;
+}
+.buy-btn {
+  display: flex;
+  margin: 40px 0;
+  margin-bottom: 60px;
+  width: 100%;
+}
+.buy-btn button {
+  border: 1px solid #888;
+  background: none;
+  color: #888;
+  font: 13px "kim";
+}
+.buy-btn .buy {
+  width: 65%;
+  padding: 15px 0;
+  background: #000;
+  color: #fff;
+  transition: all 0.3s;
+}
+.buy-btn .buy:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.buy-btn .cart {
+  width: 35%;
+  padding: 15px 0;
+  transition: all 0.3s;
+}
+.buy-btn .cart:hover {
+  background: #888;
+  color: #fff;
+}
+.detail-content-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.detail-content-bottom .detail-content-btn {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+  gap: 5px;
+  font: 13px "kim";
+}
+.detail-content-bottom .detail-content-btn button {
+  border: none;
+  border-bottom: 1px solid #888;
+  background: none;
+  padding-bottom: 8px;
+  flex: 1;
+  text-align: start;
+  color: #888;
+  cursor: pointer;
+}
+.delivery-content {
+  display: none;
+  flex-direction: column;
+  font: bold 14px "kim";
+}
+.delivery-content.active {
+  display: flex;
+}
+.details-content {
+  display: none;
+  flex-direction: column;
+  font: 14px "kim";
+}
+.details-content span {
+  margin-bottom: 25px;
+  padding-right: 60px;
+}
+.details-content.active {
+  display: flex;
+}
+.size-content {
+  display: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
+  font: 13px "kim";
+  margin-bottom: 20px;
+}
+th {
+  border-bottom: 1px solid #ddd;
+  text-align: start;
+  padding-bottom: 5px;
+}
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+  padding-right: 70px;
+}
+.size-content span {
+  font: 13px "kim";
+}
+.size-content.active {
+  display: block;
+}
+/* footer */
+.footer-menu {
+  width: 100%;
+  height: 102px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  border: 1px solid #eee;
+  font: 13px "kim";
+  color: #111;
+}
+.footer-menu-l {
+  width: 40%;
+  display: flex;
+  justify-content: start;
+}
+.footer-menu-l a {
+  margin-right: 40px;
+}
+.footer-menu-r {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+}
+.footer-menu-r img {
+  width: 20px;
+}
+.footer-menu-r span {
+  line-height: 20px;
+  margin-left: 10px;
+}
+.footer-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 35px;
+  font: 13px "kim";
+}
+.footer-content span {
+  font: 13px "kim";
+}
+.footer-content p {
+  margin: 10px 0 40px;
+  color: #888;
+}
+.help {
+  font: 13px "kim";
+}
+.help p {
+  margin-top: 30px;
+  color: #888;
+}
+.help-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+}
+.help-menu span {
+  font: 12px "kim";
+  color: #888;
+  margin-bottom: 10px;
+}
+.help-menu img {
+  width: 20px;
+  margin-top: 20px;
+}
+.m-footer {
+  display: none;
+}
+
+@media screen and (max-width: 1020px) {
+  .logo3 {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo3 img {
+    width: 167 px;
+  }
+  .nav-right span {
+    display: none;
+  }
+  .search-right .search-header {
+    width: 100%;
+    height: 80px;
+    padding: 0 35px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #111;
+  }
+  .search-header span {
+    display: block;
+    font: 14px "kim";
+  }
+  .search-header a i {
+    font-size: 16px;
+    color: #999;
+    transition: all 0.3s;
+  }
+  .search-header a i:hover {
+    color: #111;
+  }
+  .account-header {
+    width: 80%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #111;
+  }
+  .account-header span {
+    display: block;
+    font-size: 21px;
+  }
+  .account-header a i {
+    font-size: 18px;
+    color: #999;
+    transition: all 0.3s;
+  }
+  .account-header a i:hover {
+    color: #111;
+  }
+  .m-category {
+    display: none;
+  }
+
+  #products {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-content {
+    margin-right: 30px;
+  }
+  .help {
+    margin-right: 30px;
+  }
+  .help-menu span:nth-child(2) {
+    text-align: end;
+  }
+  .m-footer {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pc-header {
+    display: none;
+  }
+  .m-header {
+    display: flex;
+  }
+  .m-header-wrapper {
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    z-index: 9;
+  }
+  .header-menu-m {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font: 12px "kim";
+  }
+  .header-menu-m.active {
+    display: none;
+  }
+  .header-close-m {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: none;
+  }
+  .header-close-m.active {
+    font: 12px "kim";
+    display: block;
+  }
+  .menu-m {
+    display: none;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    font: 14px "kim";
+    background: #fff;
+    cursor: pointer;
+  }
+  .menu-m.active {
+    display: block;
+  }
+  .menu1 {
+    padding: 0 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  .menu1 li {
+    margin-bottom: 20px;
+  }
+  .menu1 .shop-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu1 .shoplist {
+    display: none;
+    flex-direction: column;
+    margin-top: 15px;
+    color: #999;
+  }
+  .menu1 .shoplist.active {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    color: #999;
+  }
+  .shoplist a {
+    margin-bottom: 15px;
+  }
+  .menu1 .shoplist a:first-child {
+    font: bold 12px "kim";
+    color: #111;
+  }
+  .menu2 {
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  .menu2 li {
+    margin-bottom: 20px;
+  }
+  .kimmatin {
+    margin-top: 20px;
+  }
+  .menu2 .arc-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu2 .arclist {
+    display: none;
+    flex-direction: column;
+    margin-top: 15px;
+    color: #999;
+  }
+  .menu2 .arclist.active {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    color: #999;
+  }
+  .arclist a {
+    margin-bottom: 15px;
+  }
+  .menu2 .shop2-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu2 .shop2list {
+    display: none;
+    flex-direction: column;
+    margin-top: 15px;
+    color: #999;
+  }
+  .menu2 .shop2list.active {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    color: #999;
+  }
+  .shop2list a {
+    margin-bottom: 15px;
+  }
+  .m-logo {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .m-logo img {
+    margin-left: 20px;
+    width: 126px;
+  }
+
+  .category {
+    display: none;
+  }
+  .category-btn {
+    display: none;
+  }
+  .m-category {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    margin-top: 60px;
+    font: 12px "kim";
+    padding-top: 10px;
+  }
+  .m-category-btn a {
+    margin-left: 3px;
+  }
+  .m-category-btn span {
+    margin-left: 3px;
+  }
+  #products {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #products a .product-name {
+    font: 8px "kim";
+    margin-bottom: 7px;
+    color: #666;
+  }
+  #products a span {
+    font: 10px "kim";
+    margin-bottom: 7px;
+  }
+  #products a p {
+    font: 8px "kim";
+    margin-bottom: 7px;
+  }
+  .product-detail {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product-detail-img {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ddd;
+    width: 100%;
+  }
+  .product-detail-img img {
+    border-bottom: 1px solid #ddd;
+  }
+  .product-detail-content {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    padding-top: 130px;
+    margin-bottom: 100px;
+  }
+  .pc-footer {
+    display: none;
+  }
+  .m-footer {
+    display: block;
+    width: 100%;
+  }
+  .m-footer-menu {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+  }
+  .m-footer-menu span {
+    font: 12px "kim";
+    font-weight: bold;
+    color: #111;
+  }
+  .m-footer-num {
+    font: 12px "kim";
+    color: #888;
+    padding: 20px 20px;
+  }
+  .m-footer-inner {
+    font: 12px "kim";
+    color: #888;
+    padding: 10px 20px;
+  }
+  .m-footer-inner span {
+    font: 12px "kim";
+    color: #111;
+    font-weight: bold;
+  }
+  .m-footer-b {
+    display: flex;
+    justify-content: space-between;
+    font: 14px "kim";
+    padding: 30px 20px;
+  }
+  .m-footer-b img {
+    width: 16px;
+    opacity: 0.6;
+  }
+}
